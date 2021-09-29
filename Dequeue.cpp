@@ -8,7 +8,6 @@ class Node
     X data;
     Node <X>*next;
 };
-template<class X>
 class DQUEUE
 {
   private:
@@ -36,7 +35,6 @@ class DQUEUE
   X Nth_element(int );//13
   void Display();//14
 };
-template<class X>
 void DQUEUE<X>::Push_front(X data)
 {
     Node<X> * p = new Node<X>;
@@ -61,7 +59,6 @@ void DQUEUE<X>::Push_front(X data)
      size++; 
     }
 }
-template<class X>
 void DQUEUE<X>::Push_back(X data)
 {
     Node<X> * p= new Node<X>;
@@ -86,7 +83,6 @@ void DQUEUE<X>::Push_back(X data)
      size++; 
     }
 }
-template<class X>
 void DQUEUE<X>::Pop_front()
 {
   if(front==NULL)
@@ -104,7 +100,6 @@ void DQUEUE<X>::Pop_front()
     size--;
   }
 }
-template<class X>
 void DQUEUE<X>::Pop_back()
 {
   if(back==NULL)
@@ -122,7 +117,6 @@ void DQUEUE<X>::Pop_back()
    size--; 
   }
 }
-template<class X>
 X DQUEUE<X>::Front()
 {
   if(front==NULL)
@@ -133,7 +127,6 @@ X DQUEUE<X>::Front()
    else 
      return front->data;
 }
-template<class X>
 X DQUEUE<X>::Back()
 {
   if(back==NULL)
@@ -144,7 +137,6 @@ X DQUEUE<X>::Back()
   else
      return back->data;
 }
-template<class X>
 string  DQUEUE<X>::Empty()
 {
   if(front == NULL)
@@ -152,12 +144,10 @@ string  DQUEUE<X>::Empty()
   else
      return "false";
 }
-template<class X>
 int DQUEUE<X>::Size()
 {
   return size;
 }
-template<class X>
 void DQUEUE<X>::Erase()
 {
   back=NULL;
@@ -170,7 +160,6 @@ void DQUEUE<X>::Erase()
   }
   size=0; 
 }
-template<class X>
 X DQUEUE<X>::Nth_element(int a)
 {
   Node<X> *p=new Node<X>;
@@ -198,7 +187,6 @@ X DQUEUE<X>::Nth_element(int a)
       return -1;
     }
 }
-template<class X>
 void DQUEUE<X>::AssignVal(int n, X x)
 {
   Node<X> *p= new Node<X>;
@@ -206,7 +194,6 @@ void DQUEUE<X>::AssignVal(int n, X x)
   while(n--)
    DQUEUE<X>::Push_back(x);
 }
-template<class X>
 void DQUEUE<X>::ReSize(int n,X d)
 {
   int m= DQUEUE<X>::Size();
@@ -225,7 +212,6 @@ void DQUEUE<X>::ReSize(int n,X d)
      DQUEUE<X>::Push_back(d);
   }
 }
-template<class X>
 void DQUEUE<X>::Display()
 {
   if(front==NULL)
